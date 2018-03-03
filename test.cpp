@@ -21,12 +21,15 @@ const ll INFL = 1e18 + 123;
 //mt19937 tw(960172);
 //ll rnd(ll x, ll y) { static uniform_int_distribution<ll> d; return d(tw) % (y - x + 1) + x; }
 
+using namespace budin;
+
 int main() {
     //freopen(TASK_NAME ".in", "r", stdin);
     //freopen(TASK_NAME ".out", "w", stdout);
     //cerr << fixed << setprecision(15);
     //cout << fixed << setprecision(15);
     
+
     list<int> l;
     for (int i = 0; i < 5; ++i) {
         cerr << i << endl;
@@ -53,6 +56,22 @@ int main() {
         cerr << num << " ";
     }
     cerr << endl;
+
+    l2.rbegin();
+    l2.rend();
+
+    l2.erase(++(++l2.begin()));
+    swap(l, l2);
+    for (int num : l) {
+        cerr << num << " ";
+    }
+    cerr << endl;
+
+    for (int num : l2) {
+        cerr << num << " ";
+    }
+    cerr << endl;
+
 
     int c = 0;
     while (true) {
