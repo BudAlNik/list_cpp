@@ -62,6 +62,9 @@ int main() {
 
     {
         //list<int>::iterator it = l2.rbegin();
+        //list<int>::reverse_iterator rit = l2.begin();
+        //list<int>::const_iterator it = l2.begin();
+        //list<int>::iterator it = (list<int>::const_iterator) l2.begin();
     }
 
     l2.erase(++(++l2.begin()));
