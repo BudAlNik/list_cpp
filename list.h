@@ -209,8 +209,9 @@ public:
             if (prev_next != NULL) {
 			    *prev_next = cur;
             }
-			prev_next = cur -> next;
+			prev_next = &(cur -> next);
 			prev = cur;
+            el = el -> next;
 		}
 	}
 	

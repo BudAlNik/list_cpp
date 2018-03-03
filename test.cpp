@@ -47,6 +47,13 @@ int main() {
     }
     cerr << endl;
 
+    cerr << "here" << endl;
+    list<int> l2 = l;
+    for (int num : l2) {
+        cerr << num << " ";
+    }
+    cerr << endl;
+
     int c = 0;
     while (true) {
         c++;
