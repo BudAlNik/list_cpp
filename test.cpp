@@ -60,6 +60,10 @@ int main() {
     l2.rbegin();
     l2.rend();
 
+    {
+        //list<int>::iterator it = l2.rbegin();
+    }
+
     l2.erase(++(++l2.begin()));
     swap(l, l2);
     for (int num : l) {
