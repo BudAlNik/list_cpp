@@ -145,7 +145,7 @@ namespace budin {
 			}
 		};
 
-		struct const_iterator : protected iterator {
+		struct const_iterator : public iterator {
 			friend list;
 		public:
 			const_iterator() : iterator() {}
@@ -160,7 +160,7 @@ namespace budin {
 			}
 		};
 
-		struct reverse_iterator : protected iterator {
+		struct reverse_iterator : public iterator {
 			friend list;
 		public:
 			reverse_iterator() : iterator() {}
@@ -170,10 +170,12 @@ namespace budin {
 			reverse_iterator(reverse_iterator const& other) : iterator(other) {}
 
 			reverse_iterator& operator++() {
-				return iterator::operator--();
+				iterator::operator--();
+				return *this;
 			}
 			reverse_iterator& operator--() {
-				return iterator::operator++();
+				iterator::operator++();
+				return *this;
 			}
 			reverse_iterator operator++(int) {
 				return iterator::operator--(0);
@@ -187,7 +189,7 @@ namespace budin {
 			}
 		};
 
-		struct const_reverse_iterator : protected reverse_iterator {
+		struct const_reverse_iterator : public reverse_iterator {
 			friend list;
 		public:
 			const_reverse_iterator() : reverse_iterator() {}

@@ -76,6 +76,17 @@ int main() {
     }
     cerr << endl;
 
+    rotate(l.begin(), ++l.begin(), l.end());
+    for (int num : l) {
+        cerr << num << " ";
+    }
+    cerr << endl;
+
+    rotate(l.rbegin(), ++(++l.rbegin()), l.rend());
+    for (int num : l) {
+        cerr << num << " ";
+    }
+    cerr << endl;
 
     int c = 0;
     while (true) {
